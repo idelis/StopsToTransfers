@@ -8,11 +8,11 @@ using System.Windows;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("StopsToTransfers")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Permet de générer un fichier transfers.txt d'après les données du fichier stops.txt")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("IDELIS")]
 [assembly: AssemblyProduct("StopsToTransfers")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("IDELIS Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

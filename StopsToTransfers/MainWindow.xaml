@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StopsToTransfers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="StopsToTransfers" Height="378.817" Width="800"
+        Icon="./Resources/Icon/points.png">
+    <Grid Margin="0,0,2,0" Height="361" VerticalAlignment="Top">
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Fichier">
+                    <MenuItem Header="_Exit" Click="MenuItem_Click" />
+                </MenuItem>
+                <MenuItem Header="_Edition">
+                    <MenuItem Command="ApplicationCommands.Cut">
+                        <MenuItem.Icon>
+                            <Image Source="./Resources/Icon/cut.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Command="ApplicationCommands.Copy">
+                        <MenuItem.Icon>
+                            <Image Source="./Resources/Icon/copy.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Command="ApplicationCommands.Paste">
+                        <MenuItem.Icon>
+                            <Image Source="./Resources/Icon/paste.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Name="MenuAbout" Header="_A propos" Click="MenuAbout_Click" />
+            </Menu>
+        </DockPanel>
+        <Label Content="Entrée (stop.txt) :" HorizontalAlignment="Left" Margin="80,42,0,0" VerticalAlignment="Top" Width="102"/>
+        <TextBox Name="txtFileStops" HorizontalAlignment="Left" Height="26" Margin="182,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430"/>
+        <Button Name="btnOpenFile" Click="btnOpenFile_Click" Margin="617,42,56,293">Parcourir</Button>
+        <Label Content="Sortie (transfers.txt) :" HorizontalAlignment="Left" Margin="60,92,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="txtFileTransfers" HorizontalAlignment="Left" Height="26" Margin="182,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430"/>
+        <Button x:Name="btnOpenFileTransfers" Click="btnOpenFileTransfers_Click" Margin="617,92,56,243" Content="Parcourir"/>
+        <Label Content="Vitesse de marche (km/h) :" HorizontalAlignment="Left" Margin="29,140,0,0" VerticalAlignment="Top" Width="153"/>
+        <ComboBox x:Name="cbWalkSpeed" Margin="182,140,470,195">
+            <ComboBoxItem IsSelected="True">3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <Button Name="btnConvert" Content="Convertir" HorizontalAlignment="Left" Margin="182,193,0,0" VerticalAlignment="Top" Width="198" Height="60" Click="BtnConvert_Click" IsEnabled="False"/>
+        <Button x:Name="btnCancel" Content="Annuler" HorizontalAlignment="Left" Margin="414,193,0,0" VerticalAlignment="Top" Width="198" Height="60" IsEnabled="False" Click="BtnCancel_Click"/>
+        <ProgressBar Name="progressBarConvert"  HorizontalAlignment="Left" Height="46" Margin="106,283,0,0" VerticalAlignment="Top" Width="580" Maximum="100" IsEnabled="False"/>
     </Grid>
 </Window>

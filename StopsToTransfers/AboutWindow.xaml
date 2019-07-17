@@ -1,0 +1,13 @@
+﻿<Window x:Class="StopsToTransfers.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StopsToTransfers"
+        mc:Ignorable="d"
+        Title="A propos de StopsToTransfers" Height="289.973" Width="497.995"
+        Icon="./Resources/Icon/points.png">
+    <DockPanel IsEnabled="False">
+        <TextBlock Name="txtAbout" Height="231" TextWrapping="Wrap" VerticalAlignment="Top" Text="" FontSize="16" Width="465" IsEnabled="False"/>
+    </DockPanel>
+</Window>
