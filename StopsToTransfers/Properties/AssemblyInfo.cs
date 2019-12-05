@@ -10,10 +10,10 @@ using System.Windows;
 [assembly: AssemblyTitle("StopsToTransfers")]
 [assembly: AssemblyDescription("Permet de générer un fichier transfers.txt d'après les données du fichier stops.txt")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("IDELIS")]
+[assembly: AssemblyCompany("SPL STAP")]
 [assembly: AssemblyProduct("StopsToTransfers")]
 [assembly: AssemblyCopyright("IDELIS Copyright ©  2019")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("IDELIS")]
 [assembly: AssemblyCulture("")]
 
 // L'affectation de la valeur false à ComVisible rend les types invisibles dans cet assembly
