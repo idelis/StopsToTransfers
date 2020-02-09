@@ -45,8 +45,16 @@
             <ComboBoxItem>4</ComboBoxItem>
             <ComboBoxItem>5</ComboBoxItem>
         </ComboBox>
+        <Label Content="Distance (m) :" HorizontalAlignment="Left" Margin="381,140,0,0" VerticalAlignment="Top" Width="93"/>
+        <ComboBox x:Name="cbRadius" Margin="474,140,178,195">
+            <ComboBoxItem Content="200"/>
+            <ComboBoxItem IsSelected="True" Content="300"/>
+            <ComboBoxItem Content="400"/>
+            <ComboBoxItem Content="500"/>
+        </ComboBox>
         <Button Name="btnConvert" Content="Convertir" HorizontalAlignment="Left" Margin="182,193,0,0" VerticalAlignment="Top" Width="198" Height="60" Click="BtnConvert_Click" IsEnabled="False"/>
         <Button x:Name="btnCancel" Content="Annuler" HorizontalAlignment="Left" Margin="414,193,0,0" VerticalAlignment="Top" Width="198" Height="60" IsEnabled="False" Click="BtnCancel_Click"/>
         <ProgressBar Name="progressBarConvert"  HorizontalAlignment="Left" Height="46" Margin="106,283,0,0" VerticalAlignment="Top" Width="580" Maximum="100" IsEnabled="False"/>
+        
     </Grid>
 </Window>

@@ -17,10 +17,10 @@ namespace StopsToTransfers
     {
         #region Variables
         BackgroundWorker bg;
-        bool stop = false;
         string fileStopsPath = null;
         string fileTransfersPath = null;
         string walkSpeed = "3";
+        string radius = "300";
         #endregion
 
         public MainWindow()
@@ -111,6 +111,7 @@ namespace StopsToTransfers
                 btnCancel.IsEnabled = true;
                 progressBarConvert.IsIndeterminate = true;
                 walkSpeed = cbWalkSpeed.SelectionBoxItem.ToString();
+                radius = cbRadius.SelectionBoxItem.ToString();
             });
 
             #region Variables
@@ -162,7 +163,8 @@ namespace StopsToTransfers
                                             lon2 = Convert.ToDouble(lineValues2[colStop_lon].Replace('.', ','));
                                         }
                                         distance = CalculateGeoDistance(lat1, lon1, lat2, lon2);
-                                        if (distance <= 0.3)
+                                        double dbRadius = Int32.Parse(radius) / 1000;
+                                        if (distance <= dbRadius)
                                         {
                                             timeDistance = CalculateTime(distance, walkSpeed);
                                             writer.WriteLine(lineValues1[colStops_Id] + "," + lineValues2[colStops_Id] + ",2," + timeDistance);
